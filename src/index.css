@@ -102,9 +102,12 @@ button.close {
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 40vh;
   position: relative;
   text-align: center;
+}
+
+.position {
+    min-height: 20rem;
 }
 
 .card-0 {
