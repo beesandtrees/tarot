@@ -29,7 +29,9 @@ export default class CardDetails extends Component {
               transitionLeaveTimeout={300}>
                <div className={this.state.classes}>
                  <button className="close" onClick={this.props.closeModal}>&times;</button>
-                 <img src={this.state.image} alt={this.props.value.name} />
+                 <div className="image-holder">
+                     <img src={this.state.image} alt={this.props.value.name} />
+                </div>
                  <div className="description">
                     <div className="primary">
                       <h2>{this.props.position} - {this.props.value.name}</h2>

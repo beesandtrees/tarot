@@ -36,6 +36,7 @@ h1 {
 }
 .controls {
     padding: 30px;
+    text-align: center;
     width: 25vw;
 }
 
@@ -51,8 +52,10 @@ button {
     border: 0;
     border-radius: 6px;
     color: white;
+    display: block;
     font-size: 1rem;
-    margin: 10px 0;
+    margin: 0 auto 20px;
+    max-width: 200px;
     padding: 0.6rem 0;
     transition: background 0.4s;
     width: 100%;
@@ -161,6 +164,7 @@ img {
     max-width: 100%;
     position: relative;
     transition: all 0.6s;
+    width: 100%;
     z-index: 1;
 }
 
@@ -214,7 +218,7 @@ h2 {
    margin: 0 0 1rem;
    padding: 1.3rem 1.6rem 0;
 }
-.card-detail img {
+.image-holder {
     margin-right: 3rem;
     max-width: 40%;
 }
@@ -297,4 +301,53 @@ h2 {
 .modal-leave.modal-leave-active {
     opacity: 0.00;
     transform: scale(0.7);
+}
+
+@media (max-width: 1440px) {
+    .position {
+        min-height: 16rem;
+    }
+}
+
+@media (max-width: 1160px) {
+    .controls {
+        padding: 1rem;
+        width: 18vw;
+    }
+    .cards {
+        width: 82vw;
+    }
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .controls {
+        text-align: center;
+        width: 100vw;
+    }
+    .card {
+        flex: 0 1 24%;
+    }
+    .card-detail {
+        left: 0;
+        padding: 4rem 1rem 1rem;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .cards {
+        width: 90vw;
+    }
+    .secondary {
+        width: 90%;
+    }
+}
+
+@media (max-width: 640px) {
+    .card {
+        flex: 0 1 100%;
+    }
 }
