@@ -181,11 +181,11 @@ img {
   color: #333;
 }
 
-.single:hover > img {
+.single.no-touch:hover > img {
   opacity: 0;
 }
 
-.single:hover > img + p {
+.single.no-touch:hover > img + p {
   display: block;
 }
 .close:hover {
@@ -219,7 +219,7 @@ h2 {
    padding: 1.3rem 1.6rem 0;
 }
 .image-holder {
-    margin-right: 3rem;
+    margin-left: 3rem;
     max-width: 40%;
 }
 .modifier {
@@ -344,9 +344,24 @@ h2 {
     .secondary {
         width: 90%;
     }
+    button.close {
+        font-size: 30px;
+        height: 30px;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+    }
 }
 
 @media (max-width: 640px) {
+    h2 {
+        font-size: 19px;
+        padding: 0.6rem 1rem 0;
+    }
+    p {
+        margin: 0;
+        padding: 0 1rem 1rem;
+    }
     .card {
         flex: 0 1 100%;
     }

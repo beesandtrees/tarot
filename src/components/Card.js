@@ -7,6 +7,8 @@ export default class Card extends Component {
   constructor(props) {
     super(props);
 
+    let isTouch = (("ontouchstart" in document.documentElement) ? ' touch' : ' no-touch');
+
     let reversed = this.props.reversed === true ? 'reversed ' : '';
     let thisCard = 'card-' + this.props.index;
     let color = this.props.index <= 4 ? 'dark' : 'light'
@@ -15,7 +17,7 @@ export default class Card extends Component {
       isOpen : false,
       image : this.props.value.arcana === 'Minor' ? './images/' + this.props.value.arcana + 'Arcana/' + this.props.value.suit + '/' + this.props.value.suit + this.props.value.id + '.jpg' :
       './images/' + this.props.value.arcana + 'Arcana/' + this.props.value.image + '.jpg',
-      classNames : thisCard + ' ' + reversed + 'single ' + color
+      classNames : thisCard + ' ' + reversed + 'single ' + color + isTouch
     };
     this.openModal = this.openModal.bind(this);
   }
