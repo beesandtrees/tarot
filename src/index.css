@@ -320,7 +320,6 @@ h2 {
     display: inline-block;
     margin: 0 10px 10px;
     max-width: 180px;
-    width: 30%;
   }
   button.close {
     background: rgba(255,255,255,0.6);
