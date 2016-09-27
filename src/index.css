@@ -314,9 +314,13 @@ h2 {
         padding: 1rem;
         width: 18vw;
     }
-    .cards {
+    .cards, .card-detail {
         width: 82vw;
     }
+    .card-detail {
+        left: 18vw;
+    }
+
     button {
         font-size: 14px;
     }
@@ -364,5 +368,24 @@ h2 {
     }
     .card {
         flex: 0 1 100%;
+    }
+}
+
+@media (max-height: 560px) {
+    .card-detail {
+        padding-top: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .card-detail img {
+        max-height: 100%;
+        width: auto;
     }
 }
