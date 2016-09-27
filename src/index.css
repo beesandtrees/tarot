@@ -332,7 +332,7 @@ h2 {
     z-index: 3;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   h2 {
     font-size: 19px;
     padding: 0.6rem 1rem 0;
