@@ -13,4 +13,7 @@ export const layout = [{
   0: "Past",
   1: "Present",
   2: "Future"
+},
+{
+  0: "Today's Card"
 }];

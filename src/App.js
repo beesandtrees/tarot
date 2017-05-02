@@ -24,7 +24,18 @@ export default class App extends React.Component {
     let allCards = display;
 
     // which layout
-    let layout = display > 3 ? 0 : 1;
+    let layout = 0;
+
+    switch(display){
+      case 3:
+        layout = 1;
+        break;
+      case 1:
+        layout = 2;
+        break;
+      default:
+        layout = 0;
+    }
 
     for (var i = 0; i < allCards; i++) {
 
@@ -37,11 +48,13 @@ export default class App extends React.Component {
           name = card.name,
           position = this.props.layout[layout][i];
 
+      var classes = layout === 2 ? "card todays" : "card";
+
       // push the card and the detail of the card to the new array
       if(load !== true) {
-        sections.push(<div className="card" key={i}><Card index={i} key={name} value={card} reversed={reversed} position={position} /></div>);
+        sections.push(<div className={classes} key={i}><Card index={i} key={name} value={card} reversed={reversed} position={position} /></div>);
       } else {
-        sections.push(<div className="card" key={i}><Position index={i} key={name} value={card} reversed={reversed} position={position} /></div>);
+        sections.push(<div className={classes} key={i}><Position index={i} key={name} value={card} reversed={reversed} position={position} /></div>);
       }
 
     }
