@@ -1,15 +1,3 @@
-:root {
-  --yellow: #F8D94F;
-  --dark-yellow: #B99A10;
-  --olive: #B0B559;
-  --dark-olive: #737822;
-  --blue: #97C3D5;
-  --dark-blue: #576D76;
-  --red: #EB6B51;
-  --dark-red: #B5270A;
-  --lilac: #C391BE;
-  --dark-lilac: #73436E;
-}
 * {
   box-sizing: border-box;
 }
@@ -41,12 +29,12 @@ h1 {
 }
 hr {
   border: 0;
-  border-top: 1px solid var(--dark-blue);
+  border-top: 1px solid #576D76;
   margin: 1.5rem auto;
   width: 60%;
 }
 button {
-  background: var(--dark-olive);
+  background: #737822;
   border: 0;
   border-radius: 6px;
   color: white;
@@ -59,13 +47,13 @@ button {
   width: 100%;
 }
 button:nth-child(2n+1) {
-  background: var(--dark-blue);
+  background: #576D76;
 }
 button:nth-child(3n+1) {
-  background: var(--dark-lilac);
+  background: #73436E;
 }
 button.ppf {
-  background: var(--red);
+  background: #EB6B51;
 }
 button:hover {
   background: #565656;
@@ -109,34 +97,34 @@ button.close {
   min-height: 20rem;
 }
 .card-0 {
-  border: 4px solid var(--yellow);
+  border: 4px solid #F8D94F;
 }
 .card-1 {
-  border: 4px solid var(--olive);
+  border: 4px solid #B0B559;
 }
 .card-2 {
-  border: 4px solid var(--blue);
+  border: 4px solid #64A9C5;
 }
 .card-3 {
-  border: 4px solid var(--red);
+  border: 4px solid #EB6B51;
 }
 .card-4 {
-  border: 4px solid var(--lilac);
+  border: 4px solid #C391BE;
 }
 .card-5 {
-  border: 4px solid var(--dark-yellow);
+  border: 4px solid #B99A10;
 }
 .card-6 {
-  border: 4px solid var(--dark-olive);
+  border: 4px solid #737822;
 }
 .card-7 {
-  border: 4px solid var(--dark-blue);
+  border: 4px solid #576D76;
 }
 .card-8 {
-  border: 4px solid var(--dark-red);
+  border: 4px solid #B5270A;
 }
 .card-9 {
-  border: 4px solid var(--dark-lilac);
+  border: 4px solid #73436E;
 }
 .reversed img, .card-detail.reversed img {
   transform: rotate(180deg);
@@ -224,34 +212,34 @@ h2 {
   border: 4px solid black;
 }
 .card-0 .primary {
-  border: 4px solid var(--yellow);
+  border: 4px solid #F8D94F;
 }
 .card-1 .primary {
-  border: 4px solid var(--olive);
+  border: 4px solid #B0B559;
 }
 .card-2 .primary {
-  border: 4px solid var(--blue);
+  border: 4px solid #64A9C5;
 }
 .card-3 .primary {
-  border: 4px solid var(--red);
+  border: 4px solid #EB6B51;
 }
 .card-4 .primary {
-  border: 4px solid var(--lilac);
+  border: 4px solid #C391BE;
 }
 .card-5 .primary {
-  border: 4px solid var(--dark-yellow);
+  border: 4px solid #B99A10;
 }
 .card-6 .primary {
-  border: 4px solid var(--dark-olive);
+  border: 4px solid #737822;
 }
 .card-7 .primary {
-  border: 4px solid var(--dark-blue);
+  border: 4px solid #576D76;
 }
 .card-8 .primary {
-  border: 4px solid var(--dark-red);
+  border: 4px solid #B5270A;
 }
 .card-9 .primary {
-  border: 4px solid var(--dark-lilac);
+  border: 4px solid #73436E;
 }
 .modal-enter {
   opacity: 0.00;
