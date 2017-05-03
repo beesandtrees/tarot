@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardDetails from './CardDetails';
+import CardDetails from '../CardDetails/CardDetails';
 
 export default class Card extends Component {
   state: any;
