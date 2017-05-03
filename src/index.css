@@ -108,6 +108,10 @@ button:hover {
   cursor: pointer;
 }
 
+.pdf {
+  margin-top: 3rem;
+}
+
 button.close {
   background: transparent;
   border: 0;
@@ -154,7 +158,7 @@ button.close {
 }
 
 .position {
-  min-height: 20rem;
+  min-height: 7rem;
 }
 
 .single {
@@ -189,7 +193,9 @@ img {
 }
 
 .position p {
-  color: #333;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .single.no-touch:hover>img {
