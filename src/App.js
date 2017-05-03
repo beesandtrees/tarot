@@ -67,8 +67,14 @@ export default class App extends React.Component {
 	render(){
   		return(
         <div className="board">
-            <Controls shuffleCards={(display, type, load) => this.shuffleCards(display, type, load)} />
-  			    <div className="cards">{this.state.sections}</div>
+          <div className="header">
+            <h1>Tarot</h1>
+            <div className="explanation">
+              <p>Tarot cards have been used in divination for hundereds of years. Each card has a meaning and read together some believe that they reveal your fortune. Use the controls below to create a unique reading. You can then save the details of your reading for later contemplation.</p>
+            </div>
+          </div>
+          <Controls shuffleCards={(display, type, load) => this.shuffleCards(display, type, load)} />
+			    <div className="cards">{this.state.sections}</div>
         </div>
   		);
 	}

@@ -4,22 +4,70 @@
 
 body,
 html {
-  background: white;
-  color: #343434;
+  color: #283C6B;
   height: 100%;
-  font-family: sans-serif;
+  font-family: lato, sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background: #A0C8E3;
+}
+
 h1 {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 260px;
+  margin: -100px 0 0;
+  position: relative;
+  transform: translateY(100px);
+  z-index: 2;
+}
+
+h2 {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 72px;
   font-weight: lighter;
 }
 
+.description h2 {
+  font-size: 36px;
+}
+
 hr + h2 {
-  font-weight: lighter;
+  font-weight: 300;
   margin: 0;
   padding: 0 0 1rem;
+}
+
+.explanation {
+  padding: 4rem 1rem 2rem;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.6;
+  border: 6px solid white;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+  z-index: 1;
+}
+
+.controls {
+  background: #283C6B;
+  color: white;
+  margin-bottom: -40px;
+  padding: 6rem 3rem;
+  position: relative;
+  text-align: center;
+  transform: translateY(-40px);
+  width: 100%;
+  z-index: 0;
 }
 
 .board {
@@ -27,16 +75,9 @@ hr + h2 {
   flex-direction: row;
   flex-wrap: wrap;
   flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  max-width: 1680px;
+  margin: 0 auto 6rem;
+  text-align: left;
   width: 100vw;
-}
-
-.controls {
-  padding: 30px;
-  text-align: center;
-  width: 25%;
 }
 
 hr {
@@ -47,42 +88,29 @@ hr {
 }
 
 button {
-  background: #737822;
-  border: 0;
-  border-radius: 6px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 3px;
   color: white;
-  display: block;
+  display: inline-block;
+  font-family: lato, sans-serif;
   font-size: 1rem;
-  margin: 0 auto 20px;
+  font-weight: 400;
+  margin: 0 10px 10px;
   max-width: 200px;
   padding: 0.6rem 0;
   transition: background 0.4s;
   width: 100%;
 }
 
-button:nth-child(2n+1) {
-  background: #576D76;
-}
-
-button:nth-child(3n+1) {
-  background: #73436E;
-}
-
-button.ppf {
-  background: #EB6B51;
-}
-
-button.today {
-  background: #B5270A;
-}
-
 button:hover {
-  background: #565656;
+  background: #2F3542;
   cursor: pointer;
 }
 
 button.close {
   background: transparent;
+  border: 0;
   color: black;
   font-size: 3rem;
   height: auto;
@@ -103,7 +131,7 @@ button.close {
   justify-content: space-around;
   margin: 0;
   padding: 0 2rem;
-  width: 75%;
+  width: 100%;
 }
 
 .card {
@@ -118,6 +146,7 @@ button.close {
 .position,
 .single {
   align-items: center;
+  background-color: white;
   display: flex;
   justify-content: center;
   position: relative;
@@ -128,44 +157,9 @@ button.close {
   min-height: 20rem;
 }
 
-.card-0 {
-  border: 4px solid #F8D94F;
-}
-
-.card-1 {
-  border: 4px solid #B0B559;
-}
-
-.card-2 {
-  border: 4px solid #64A9C5;
-}
-
-.card-3 {
-  border: 4px solid #EB6B51;
-}
-
-.card-4 {
-  border: 4px solid #C391BE;
-}
-
-.card-5 {
-  border: 4px solid #B99A10;
-}
-
-.card-6 {
-  border: 4px solid #737822;
-}
-
-.card-7 {
-  border: 4px solid #576D76;
-}
-
-.card-8 {
-  border: 4px solid #B5270A;
-}
-
-.card-9 {
-  border: 4px solid #73436E;
+.single {
+  border: 4px solid #283C6B;
+  border-radius: 3px;
 }
 
 .reversed img,
@@ -215,12 +209,12 @@ img {
   background: white;
   display: flex;
   height: 100vh;
-  left: 25vw;
+  left: 0;
   padding: 4rem;
   position: fixed;
   text-align: left;
   top: 0;
-  width: 75vw;
+  width: 100vw;
   z-index: 2;
 }
 
@@ -243,7 +237,8 @@ h2 {
 
 .image-holder {
   margin-left: 3rem;
-  max-width: 40%;
+  max-height: 90vh;
+  max-width: 30%;
 }
 
 .modifier {
@@ -270,44 +265,8 @@ h2 {
   border: 4px solid black;
 }
 
-.card-0 .primary {
-  border: 4px solid #F8D94F;
-}
-
-.card-1 .primary {
-  border: 4px solid #B0B559;
-}
-
-.card-2 .primary {
-  border: 4px solid #64A9C5;
-}
-
-.card-3 .primary {
-  border: 4px solid #EB6B51;
-}
-
-.card-4 .primary {
-  border: 4px solid #C391BE;
-}
-
-.card-5 .primary {
-  border: 4px solid #B99A10;
-}
-
-.card-6 .primary {
-  border: 4px solid #737822;
-}
-
-.card-7 .primary {
-  border: 4px solid #576D76;
-}
-
-.card-8 .primary {
-  border: 4px solid #B5270A;
-}
-
-.card-9 .primary {
-  border: 4px solid #73436E;
+.single .primary {
+  border: 4px solid #283C6B;
 }
 
 .modal-enter {
@@ -332,36 +291,14 @@ h2 {
   transform: scale(0.7);
 }
 
-@media (max-width: 1440px) {
-  .position {
-    min-height: 16rem;
-  }
-}
-
-@media (max-width: 1160px) {
-  .controls {
-    padding: 1rem;
-    width: 18vw;
-  }
-  .cards,
-  .card-detail {
-    width: 82vw;
-  }
-  .card-detail {
-    left: 18vw;
-  }
-  button {
-    font-size: 14px;
-  }
-}
-
 @media (max-width: 992px) {
   .controls {
     text-align: center;
     width: 100vw;
   }
   h1 {
-    margin: 0.5rem auto;
+    font-size: 200px;
+    padding-left: 2rem;
   }
   hr {
     margin: 0.5rem auto 1rem;
@@ -373,9 +310,6 @@ h2 {
   button {
     font-size: 14px;
   }
-  .cards {
-    width: 90vw;
-  }
   .card {
     flex: 0 1 24%;
   }
@@ -386,11 +320,6 @@ h2 {
   }
   .secondary {
     width: 90%;
-  }
-  button {
-    display: inline-block;
-    margin: 0 10px 10px;
-    max-width: 180px;
   }
   button.close {
     background: rgba(255, 255, 255, 0.6);
@@ -404,6 +333,20 @@ h2 {
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 120px;
+    margin: -60px 0 0;
+    transform: translateY(60px);
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .explanation {
+    padding: 3.2rem 0.8rem 0.8rem;
+    font-size: 22px;
+  }
   .close:before {
     content: '';
     display: block;
@@ -419,31 +362,27 @@ h2 {
 }
 
 @media (max-width: 640px) {
-  h2 {
-    font-size: 19px;
-    padding: 0.6rem 1rem 0;
-  }
-  p {
-    margin: 0;
-    padding: 0 1rem 1rem;
-  }
-  .card, .todays {
+  .card,
+  .todays {
     flex: 0 1 100%;
   }
-}
-
-@media (max-height: 560px) {
+  .explanation {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .description h2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 1rem;
+  }
+  .description p {
+    padding: 0 1rem 2rem;
+    width: 100%;
+  }
+  .image-holder {
+    margin-left: 1rem;
+  }
   .card-detail {
-    padding-top: 20px;
-  }
-  h2 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 12px;
-  }
-  .card-detail img {
-    max-height: 100%;
-    width: auto;
+    padding: 4rem 1rem 2rem;
   }
 }
